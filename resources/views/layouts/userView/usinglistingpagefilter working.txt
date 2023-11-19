@@ -1,0 +1,508 @@
+@include('layouts/userView/user_header')
+<style>
+    div#filter form {
+    display: flex;
+}
+
+</style>
+    <!-- products content -->
+    <div class="bg-main">
+        <div class="container">
+            <div class="box">
+                <div class="breadcumb">
+                    <a href="./index.html">home</a>
+                    <span><i class='bx bxs-chevrons-right'></i></span>
+                    <a href="./products.html">all products</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="row">
+                    <div class="col-3 filter-col" id="filter-col">
+                        <div class="box filter-toggle-box">
+                            <button class="btn-flat btn-hover" id="filter-close">close</button>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Categories
+                            </span>
+                            <ul class="filter-list">
+                                <li><a href="#">Wireless</a></li>
+                                <li><a href="#">In-ear headphone</a></li>
+                                <li><a href="#">Over-ear headphone</a></li>
+                                <li><a href="#">sport headphone</a></li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Price
+                            </span>
+                            <div class="price-range">
+                                <input type="text">
+                                <span>-</span>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="status1">
+                                        <label for="status1">
+                                            On sale
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="status2">
+                                        <label for="status2">
+                                            In stock
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="status3">
+                                        <label for="status3">
+                                            Featured
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Brands
+                            </span>
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1" checked="checked">
+                                        <label for="remember1">
+                                            JBL
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember2">
+                                        <label for="remember2">
+                                            Beat
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember3">
+                                        <label for="remember3">
+                                            Logitech
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember4">
+                                        <label for="remember4">
+                                            Samsung
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember5">
+                                        <label for="remember5">
+                                            Sony
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                Colors
+                            </span>
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            Red
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember2">
+                                        <label for="remember2">
+                                            Blue
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember3">
+                                        <label for="remember3">
+                                            White
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember4">
+                                        <label for="remember4">
+                                            Pink
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember5">
+                                        <label for="remember5">
+                                            Yellow
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <span class="filter-header">
+                                rating
+                            </span>
+                            <ul class="filter-list">
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="group-checkbox">
+                                        <input type="checkbox" id="remember1">
+                                        <label for="remember1">
+                                            <span class="rating">
+                                                <i class='bx bxs-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <i class='bx bx-check'></i>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-9 col-md-12">
+                        <div class="box filter-toggle-box">
+                            <button class="btn-flat btn-hover" id="filter-toggle">filter</button>
+                        </div>
+                            {{-- from search filter --}}
+                            <div class="row" id="filter">
+                                <form>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="make" class="filter-make filter form-control">
+                                            <option value="">Select Make</option>
+                                            <option value="">Show All</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="model" class="filter-model filter form-control">
+                                            <option value="">Select Model</option>
+                                            <option value="">Show All</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="type" class="filter-type filter form-control">
+                                            <option value="">Select Type</option>
+                                            <option value="">Show All</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-sm-3 col-xs-6">
+                                        <select data-filter="price" class="filter-price filter form-control">
+                                            <option value="">Select Price Range</option>
+                                            <option value="">Show All</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            {{-- from search filter --}}
+
+
+                        <div class="box">
+                            <div class="row" id="products">
+                                {{-- insert the listing --}}
+                                {{-- @foreach($listings as $listing) --}}
+                                <div class="col-4 col-md-6 col-sm-12">
+                                    <div class="product-card">
+                                        <div class="product-card-img">
+                                            {{-- <img src="{{asset('assets/userview/img_house/house1.webp')}}" alt=""> --}}
+                                            {{-- <img src="{{asset('assets/userview/img_house/house1.1.webp')}}" alt=""> --}}
+                                        </div>
+                                        <div class='product-card-info'>
+                                            <div class='product-btn'>
+                                                <a href='./product-detail.html' class='btn-flat btn-hover btn-shop-now'>shop now</a>
+                                                <button class='btn-flat btn-hover btn-cart-add'>
+                                                    <i class='bx bxs-cart-add'></i>
+                                                </button>
+                                                <button class='btn-flat btn-hover btn-cart-add'>
+                                                    <i class='bx bxs-heart'></i>
+                                                </button>
+                                            </div>
+                                            <div class='product-card-name'>
+                                                property name
+                                            </div>
+                                            <div class='product-card-price'>
+                                                <span><del>old price</del></span>
+                                                <span class='curr-price'>
+                                                    price
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                                {{-- @endforeach --}}
+                                {{-- <div class="col-sm-4 product" data-make="Gibson" data-model="Les Paul" data-type="Electric" data-price="3000">
+                                    <div class="product-inner text-center"><img src="http://www.sweetwater.com/images/items/120/LPST5HTHDCH-medium.jpg?9782bd">
+                                        <br>Make: Gibson<br>Model: Les Paul<br>
+                                        Type: Electric<br>Price: $3,000
+                                    </div></div> --}}
+                                {{-- end of listin --}}
+                            </div>
+                        </div>
+                        {{-- <div class="box">
+                            <ul class="pagination">
+                                <li><a href="#"><i class='bx bxs-chevron-left'></i></a></li>
+                                <li><a href="#" class="active">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class='bx bxs-chevron-right'></i></a></li>
+                            </ul>
+                        </div> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end products content -->    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js" ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" ></script>
+    <script>
+        var data = [
+	{
+		"make": "Gibson",
+		"model": "Les Paul",
+		"type": "Electric",
+		"price": "$3,000",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	},
+	{
+		"make": "Gibson",
+		"model": "SG",
+		"type": "Electric",
+		"price": "$1,500",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	},
+	{
+		"make": "Fender",
+		"model": "Telecaster",
+		"type": "Electric",
+		"price": "$2,000",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	},
+	{
+		"make": "Fender",
+		"model": "Stratocaster",
+		"type": "Electric",
+		"price": "$2,000",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	},
+	{
+		"make": "Gretsch",
+		"model": "White Falcon",
+		"type": "Electric",
+		"price": "$5,000",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	},
+	{
+		"make": "Paul Reed Smith",
+		"model": "Custom 24",
+		"type": "Electric",
+		"price": "$5,000",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	},
+	{
+		"make": "Gibson",
+		"model": "Hummingbird",
+		"type": "Acoustic",
+		"price": "$2,500",
+		"image": "{{asset('assets/userview/img_house/house1.webp')}}"
+	}
+];
+
+var products = "",
+	makes = "",
+	models = "",
+	types = "";
+
+for (var i = 0; i < data.length; i++) {
+	var make = data[i].make,
+		model = data[i].model,
+		type = data[i].type,
+		price = data[i].price,
+		rawPrice = price.replace("$",""),
+		rawPrice = parseInt(rawPrice.replace(",","")),
+		image = data[i].image;
+	
+	//create product cards
+	products += "<div class='col-4 col-md-6 col-sm-12 product' data-make='" + 
+    make + "' data-model='" + 
+    model + "' data-type='" +
+    type + "' data-price='" + 
+    rawPrice + "'><div class='product-card'> <div class='product-card-img'> <img src='" + 
+    image + "'><img src='" + 
+    image + "'></div>   <div class='product-card-info'><div class='product-btn'><a href='./product-detail.html' class='btn-flat btn-hover btn-shop-now'>shop now</a><button class='btn-flat btn-hoverbtn-cart-add'><i class='bx bxs-cart-add'></i></button><button class='btn-flat btn-hover btn-cart-add'><i class='bx bxs-heart'></i></button></div><div class='product-card-name'>property name</div><div class='product-card-price'><span><del>old price</del></span><span class='curr-price'>price</span></div></div>    Make: " +
+    price + "</div></div>";
+	
+	//create dropdown of makes
+	if (makes.indexOf("<option value='" + make + "'>" + make + "</option>") == -1) {
+		makes += "<option value='" + make + "'>" + make + "</option>";
+	}
+	
+	//create dropdown of models
+	if (models.indexOf("<option value='" + model+"'>" + model + "</option>") == -1) {
+		models += "<option value='" + model + "'>" + model + "</option>";
+	}
+	
+	//create dropdown of types
+	if (types.indexOf("<option value='" + type + "'>" + type + "</option>") == -1) {
+		types += "<option value='" + type + "'>" + type + "</option>";
+	}
+}
+
+$("#products").html(products);
+$(".filter-make").append(makes);
+$(".filter-model").append(models);
+$(".filter-type").append(types);
+
+var filtersObject = {};
+
+//on filter change
+$(".filter").on("change",function() {
+	var filterName = $(this).data("filter"),
+		filterVal = $(this).val();
+	
+	if (filterVal == "") {
+		delete filtersObject[filterName];
+	} else {
+		filtersObject[filterName] = filterVal;
+	}
+	
+	var filters = "";
+	
+	for (var key in filtersObject) {
+	  	if (filtersObject.hasOwnProperty(key)) {
+			filters += "[data-"+key+"='"+filtersObject[key]+"']";
+	 	}
+	}
+	
+	if (filters == "") {
+		$(".product").show();
+	} else {
+		$(".product").hide();
+		$(".product").hide().filter(filters).show();
+	}
+});
+
+//on search form submit
+$("#search-form").submit(function(e) {
+	e.preventDefault();
+	var query = $("#search-form input").val().toLowerCase();
+
+	$(".product").hide();
+	$(".product").each(function() {
+		var make = $(this).data("make").toLowerCase(),
+			model = $(this).data("model").toLowerCase(),
+			type = $(this).data("type").toLowerCase();
+
+		if (make.indexOf(query) > -1 || model.indexOf(query) > -1 || type.indexOf(query) > -1) {
+			$(this).show();
+		}
+	});
+});
+    </script>
+@include('layouts/userView/user_footer')
