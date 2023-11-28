@@ -1,4 +1,4 @@
-<img src="https://dev-vincentelipe.pantheonsite.io/wp-content/uploads/2023/11/siteLogo.png" width="250" style="justify-content:center">
+<img src="https://dev-vincentelipe.pantheonsite.io/wp-content/uploads/2023/11/siteLogo.png" width="250" style="padding-left:30%">
 
 /<br>
 │<br>
