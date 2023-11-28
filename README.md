@@ -1,4 +1,6 @@
-<img src="https://dev-vincentelipe.pantheonsite.io/wp-content/uploads/2023/11/siteLogo.png" width="250" style="padding-left:30em; margin:30em">
+<p align="center"><a href="https://laravel.com" target="_blank">
+<img src="https://dev-vincentelipe.pantheonsite.io/wp-content/uploads/2023/11/siteLogo.png" width="250" style="justify-content:center">
+</a></p>    
 
 /<br>
 │<br>
